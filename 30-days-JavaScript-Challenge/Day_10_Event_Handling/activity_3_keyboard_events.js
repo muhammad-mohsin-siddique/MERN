@@ -2,7 +2,7 @@
 
 const typingField = document.querySelector('#typing');
 typingField.addEventListener('keydown', function(e){
-    console.log(e.key);
+    console.log(e.key === ' ' ? 'Space' : e.key);
     console.log(e.keyCode);
 }, false);
 

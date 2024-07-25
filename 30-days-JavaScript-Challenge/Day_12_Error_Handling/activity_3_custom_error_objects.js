@@ -10,7 +10,7 @@ class CustomError extends Error {
 // Function that throws an instance of the custom error
 
 function division(numerator,denominator){
-    if(denominator == 0){
+    if(denominator == 0 || denominator == undefined){
         throw new CustomError('Dividing by Zero!');
     }else
     {

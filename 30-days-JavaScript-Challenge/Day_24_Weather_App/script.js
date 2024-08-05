@@ -21,6 +21,7 @@ function getWeatherInformation(cityName) {
         })
         .then((data) => {
             if (data.cod === 200) {
+                
                 CityName = data.name;
                 temperature = data.main['temp'] - 273.15;
                 weatherCondition = data.weather[0]['main'];
@@ -46,15 +47,11 @@ function getWeatherInformation(cityName) {
                         <h2>City Name: <span>${CityName}</span></h2>
                         <h2>Weather Condition: <span>${weatherCondition}</span></h2>
                     </div>
-                    <div class="week-forecast">
-                        <h2>7-Day Forecast</h2>
-                        <div class="forecast-list">
-                    </div>
                 `;
                 weatherApp.style.display = 'block';
                 weatherApp.innerHTML = weatherShownTemplate;
                 // console.log(`City: ${CityName}, Temperature ${temperature.toFixed(2)}°C, Weather Condition: ${weatherCondition}`);
-                // console.log(data);
+                console.log(data);
             } else if (data.cod === 401) {
                 throw new Error('Error 401 - Unauthorized');
             } else if (data.cod === 400) {

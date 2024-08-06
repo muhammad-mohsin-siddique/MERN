@@ -12,7 +12,6 @@ btn.addEventListener('click', (e) => {
                 return resolve.json();
             } else return new Error('Movie Not Found');
         }).then((data) => {
-            console.log(data);
             if (data.Title !== undefined || data.Title !== undefined || data.Poster !== undefined) {
                 const element = `
 
@@ -32,9 +31,6 @@ btn.addEventListener('click', (e) => {
                             <p class="movie-year"><h3>Director:</h3> ${data.Director}</p>
                         </div>
                     `;
-                    console.log(more_info)
-                    console.log(element)
-
                     more_info.innerHTML = element;
                 });
 

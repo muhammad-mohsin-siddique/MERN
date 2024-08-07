@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WEB Socket</title>
+</head>
+<body>
+    <div id="login-container" class="active">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="username-input" placeholder="Your name" autocomplete="off">
+        <button id="login-button">Join Chat</button>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chat-container">
+        <div id="messages"></div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+    
+    <script src="client.js"></script>
+</body>
+</html>

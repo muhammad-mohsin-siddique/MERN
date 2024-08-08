@@ -1,16 +1,17 @@
 {
   "name": "day_26_chat_application",
-  "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "express": "^4.19.2",
     "ws": "^8.18.0"
   }
 }

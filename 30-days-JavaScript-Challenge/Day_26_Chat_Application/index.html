@@ -1,27 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WEB Socket</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: White;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 50%;
+            height: 30px;
+            border: none;
+            margin-left: 20%;
+        }
+
+        #chat-container {
+            width: 80%;
+            margin: auto;
+            display: none;
+        }
+
+        pre {
+            height: 400px;
+            overflow-y: scroll;
+            margin-left: 2%;
+        }
+
+        button {
+            height: 35px;
+            color: white;
+            border: none;
+            background-color: rgb(0, 163, 108);
+        }
+
+        button:hover {
+            background-color: rgb(0, 128, 128);
+        }
+
+        /* Track */
+        ::-webkit-scrollbar {
+            width: 12px;
+            /* Width of the scrollbar */
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            /* Color of the scrollbar handle */
+            border-radius: 6px;
+            /* Rounded corners for the handle */
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+            /* Color of the handle on hover */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Color of the track */
+            border-radius: 6px;
+            /* Rounded corners for the track */
+        }
+
+        #login-container {
+            text-align: center;
+            color: black;
+            width: 400px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            padding: 20px;
+            margin: auto;
+        }
+
+        #login-container.active,
+        #chat-container.active {
+            display: block;
+        }
+
+        #username-input {
+            flex-grow: 1;
+            /* padding: 8px; */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 55%;
+            margin-left: -5%;
+        }
+
+        #login-button {
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #login-button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <title>My Chat Application</title>
 </head>
+
 <body>
     <div id="login-container" class="active">
         <h2>Enter Your Name</h2>
         <input type="text" id="username-input" placeholder="Your name" autocomplete="off">
         <button id="login-button">Join Chat</button>
     </div>
-
-    <!-- Chat Screen -->
     <div id="chat-container">
-        <div id="messages"></div>
-        <form id="message-form">
-            <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
-            <button type="submit" id="send-button">Send</button>
-        </form>
+        <h1>Real Time Messaging</h1>
+        <pre id="messages"></pre>
+        <input type="text" id="messageBox" placeholder="Type your text here">
+        <button id="senMessage" title="Send Message!">Send Message</button>
     </div>
-    
+
     <script src="client.js"></script>
 </body>
+
 </html>

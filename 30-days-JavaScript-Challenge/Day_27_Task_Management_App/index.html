@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Management App</title>
+</head>
+
+<body>
+    <div class="app-heading">
+        <h1> Task Management App</h1>
+    </div>
+    <div class="taskForm">
+        <form>
+            <input type="text" placeholder="What are your tasks for today?" required>
+            <button id="sbt-btn" title="Add Task">Add</button>
+        </form>
+    </div>
+    <div class="displayTasks">
+        <table>
+            <tr>
+                <th>Sr#</th>
+                <th colspan="3">Task</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1:</td>
+                <td colspan="3">Emil</td>
+                <td><span id="edit">Edit</span><span id="pending">pending</span><span id="delete">Delete</span></td>
+            </tr>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

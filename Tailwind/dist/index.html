@@ -1,61 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta name="description" content="Gen-AI Project - An innovative AI-powered app">
+    <title>Gen-AI Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
 </head>
 
-<!-- Grid:
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-    grid
-    place-content-center 
--->
-<!-- view-Height 
-
-    h-screen
--->
-
-<!-- dark mode
-
-dark: then property on the element will be applicable only when the dark mode is enable/disable
-
-
--->
-<body class="bg-slate-900 grid place-content-center h-screen" >
-    <h1 class="text-white text-4xl m-6" >Test</h1>
-
-    <!-- Card Design With Tailwind CSS -->
-
-    <div class="">
-        <div class="bg-white p-6 max-w-md mx-auto rounded-xl shadow-lg flex items-center space-x-4">
-            <div class="h-16 w-16">
-                <img   src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724284800&semt=ais_hybrid" alt="Logo">
-            </div>
-            <div class="text-xl font-medium text-black">
-                Tailwind CSS
-                <p class="text-slate-500 text-sm">Muhammad Mohsin Siddique</p>
-            </div>
+    <nav class="p-4 bg-blue-500 dark:bg-blue-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white">InsightFlow Pro</h1>
+            <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-700 p-2 rounded-full">
+                Toggle Dark Mode
+            </button>
         </div>
-    </div>
-    <button class="bg-sky-500 text-white my-2 p-2 rounded-lg taxt-base hover:bg-white hover:text-black" >Buy Now</button>
-    <div class="text-center">
-        <p class="text-white sm:text-green-500 md:text-sky-300  ">Lorem, ipsum dolor sit</p>
-    </div>
-    <div class="mt-10">
-        <div class="bg-white p-6 max-w-md mx-auto rounded-xl shadow-lg">
-            <div>
-                <img class="h-23 w-23"   src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724284800&semt=ais_hybrid" alt="Logo">
-            </div>
-            <div class="text-xl font-medium text-black">
-                Tailwind CSS
-                <p class="text-slate-500 text-sm">Muhammad Mohsin Siddique</p>
-            </div>
-        </div>
-    </div>
+    </nav>
 
-    47:39
+    <section id="main-content" class="flex flex-col justify-center items-center text-center p-6">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Gen-AI</h2>
+        <p class="text-lg md:text-xl mb-8">Unleash the Power of AI with our Next-Gen Platform</p>
+        <button id="get-started-btn" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            Get Started
+        </button>
+    </section>
 
+     <script src="../src/script.js"></script>
 </body>
+
 </html>
